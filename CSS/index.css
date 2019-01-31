@@ -56,6 +56,7 @@
 }
 .tabs .tabs-item {
   display: none;
+  transition: 0.5s;
   width: 75%;
 }
 .tabs .tabs-item .tabs-item-title {
@@ -77,6 +78,7 @@
   border-right: 1px solid white;
   color: #ffffff;
   cursor: pointer;
+  transition: 0.5s;
 }
 .tabs .tabs-link:hover {
   background-color: #be2530;

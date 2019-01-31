@@ -16,10 +16,17 @@ class Dropdown {
 
   toggleContent() {
     // Toggle the ".dropdown-hidden" class off and on
-    this.content.classList.toggle('dropdown-hidden');
+    if(this.content.classList.contains('dropdown-hidden')){
+        TweenMax.to('.dropdown-content', 1, {x: -400});
+        setTimeout(() => this.element.classList.toggle('dropdown-hidden'), 600);
+      } else{
+        TweenMax.to('.dropdown-content', 1, {x: 0});
+        this.element.classList.toggle('dropdown-hidden');
+      }
   }
 }
 
 
 // Nothing to do here, just study what the code is doing and move on to the Dropdown class
+TweenMax.to('.dropdown-content', 0, {x: -500});
 let dropdowns = document.querySelectorAll('.dropdown').forEach( dropdown => new Dropdown(dropdown));
